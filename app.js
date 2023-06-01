@@ -55,6 +55,16 @@ app.post('/create', (req, res) => {
     return res.redirect('/');
 });
 
+app.get('/read/:id', (req, res) => {
+    db.all(`SELECT * FROM post WHERE id=${req.params.id}`, [], (err, rows) => {
+        if (err) {
+            throw err;
+        }
+            console.log(rows);
+            res.render('post_detail', {post:rows});
+    });
+});
+
 app.get('/delete', (req, res) => {
     return res.render('index', {title:"제목"});
 });

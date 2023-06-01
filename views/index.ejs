@@ -17,7 +17,7 @@
         <div class="post_list">
             <% post_list.forEach((post) => { %>
                 <div class="post_item">
-                    <div class="post_title"><%= post.title %></div>
+                    <div class="post_title" onclick="location.href='./read/<%= post.id %>';"><%= post.title %></div>
                     <div class="post_date"><%= post.date %></div>
                 </div>
             <% }) %>

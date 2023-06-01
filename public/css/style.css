@@ -57,6 +57,7 @@ div.post_list div.post_item div.post_title {
     text-align: left;
     margin-left:10px;
     overflow: hidden;
+    cursor: pointer;
 }
 div.post_list div.post_item div.post_date {
     width:133px;
