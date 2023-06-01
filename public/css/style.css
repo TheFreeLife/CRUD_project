@@ -1,6 +1,9 @@
 body {
-    width:100%;
+    display:inline-block;
     height:100%;
+    width:840px;
+    padding:0px;
+    margin:0px;
 }
 
 html {
@@ -12,6 +15,61 @@ html {
 div.main_container {
     display: inline-block;
     width:840px;
-    background-color: burlywood;
+    background-color: rgb(223, 213, 201);
     height:100%;
+    border-radius: 10px;
+}
+
+div.header{
+    display: inline-block;
+    border-bottom:2px solid black;
+    padding-top: 5px;
+    padding-bottom:5px;
+}
+
+div.header div {
+    display: inline-block;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+div.header div.title {
+    width:700px;
+}
+
+div.header div.date {
+    width:133px;
+    border-left: 1px solid black;
+}
+
+div.post_item {
+    padding-top:5px;
+    padding-bottom:5px;
+    border-bottom:1px solid gray;
+}
+
+div.post_list div.post_item div {
+    display: inline-block;
+}
+
+div.post_list div.post_item div.post_title {
+    width:690px;
+    text-align: left;
+    margin-left:10px;
+    overflow: hidden;
+}
+div.post_list div.post_item div.post_date {
+    width:133px;
+
+}
+
+div.new_post_btn {
+    display: inline-block;
+    width: 840px;
+    font-size: 25px;
+    background-color: rgb(226, 205, 179);
+    border-radius: 10px;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin-bottom:5px;
 }
