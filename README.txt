@@ -1,0 +1,1 @@
+db primary key 초기화: UPDATE SQLITE_SEQUENCE SET seq = 0 WHERE name = '{TABLE_NAME}';
