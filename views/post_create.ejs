@@ -8,14 +8,16 @@
     <title>게시판</title>
 </head>
 <body>
-    <div class="main_container">
-        <input type="text" name="title" class="input_title" placeholder="제목"/>
-        <hr/>
-        <textarea cols="112" rows="30" name="detail" class="input_detail" placeholder="내용"></textarea>
-    </div>
-    <div class="btn-group">
-        <button class="post_modify_btn">저장</button>
-        <button class="post_delete_btn">취소</button>
-    </div>
+    <form action="/create" accept-charset="utf-8" name="add-post" method="post">
+        <div class="main_container">
+            <input type="text" name="title" class="input_title" placeholder="제목"/>
+            <hr/>
+            <textarea cols="112" rows="30" name="detail" class="input_detail" placeholder="내용"></textarea>
+        </div>
+        <div class="btn-group">
+            <button type="submit" class="post_modify_btn">저장</button>
+            <button class="post_delete_btn">취소</button>
+        </div>
+    </form>
 </body>
 </html>

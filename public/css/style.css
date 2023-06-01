@@ -34,11 +34,11 @@ div.header div {
 }
 
 div.header div.title {
-    width:700px;
+    width:670px;
 }
 
 div.header div.date {
-    width:133px;
+    width:163px;
     border-left: 1px solid black;
 }
 
@@ -53,13 +53,14 @@ div.post_list div.post_item div {
 }
 
 div.post_list div.post_item div.post_title {
-    width:690px;
+    width:650px;
     text-align: left;
     margin-left:10px;
     overflow: hidden;
 }
 div.post_list div.post_item div.post_date {
     width:133px;
+    white-space: nowrap;
 
 }
 
