@@ -87,7 +87,7 @@ app.get('/delete/:id', (req, res) => {
 });
 
 app.post('/search', (req, res) => {
-    db.all(`SELECT * FROM post`, [], (err, rows) => {
+    db.all(`SELECT * FROM post WHERE title LIKE '%${req.body.inputPost}%' OR detail LIKE '%${req.body.inputPost}%';`, [], (err, rows) => {
         if (err) {
             throw err;
         }
