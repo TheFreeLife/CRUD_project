@@ -50,7 +50,6 @@ app.get('/create', (req, res) => {
 });
 
 app.post('/create', (req, res) => {
-    console.log("HIHI");
     if(req.body.title == "") {
         db.run(`INSERT INTO post (title, detail) VALUES ('빈 제목', '${req.body.detail}');`);
     } else {
@@ -70,7 +69,6 @@ app.get('/modify/:id', (req, res) => {
 });
 
 app.post('/modify/:id', (req, res) => {
-    console.log("HIHI");
     if(req.body.title == "") {
         db.run(`UPDATE post SET title='빈 제목', detail='${req.body.detail}' WHERE id=${req.params.id};`);
     } else {
