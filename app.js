@@ -55,6 +55,22 @@ app.post('/create', (req, res) => {
     return res.redirect('/');
 });
 
+app.get('/modify/:id', (req, res) => {
+    db.all(`SELECT * FROM post WHERE id=${req.params.id}`, [], (err, rows) => {
+        if (err) {
+            throw err;
+        }
+            console.log(rows);
+            res.render('post_modify', {post:rows});
+    });
+});
+
+app.post('/modify/:id', (req, res) => {
+    console.log("HIHI");
+    db.run(`UPDATE post SET title='${req.body.title}', detail='${req.body.detail}' WHERE id=${req.params.id};`);
+    return res.redirect('/');
+});
+
 app.get('/read/:id', (req, res) => {
     db.all(`SELECT * FROM post WHERE id=${req.params.id}`, [], (err, rows) => {
         if (err) {
