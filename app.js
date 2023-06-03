@@ -86,8 +86,14 @@ app.get('/delete/:id', (req, res) => {
     return res.redirect('/');
 });
 
-app.get('/search', (req, res) => {
-    return res.render('index', {title:"제목"});
+app.post('/search', (req, res) => {
+    db.all(`SELECT * FROM post`, [], (err, rows) => {
+        if (err) {
+            throw err;
+        }
+            console.log(rows);
+            res.render('search_result', {post_list:rows});
+    });
 });
 //--------------------------------------------------------------
 

@@ -125,3 +125,11 @@ input.input_title {
 textarea {
     resize: none;
 }
+
+input.search-post {
+    width:400px;
+    height:20px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
