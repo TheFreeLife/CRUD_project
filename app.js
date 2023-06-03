@@ -65,8 +65,9 @@ app.get('/read/:id', (req, res) => {
     });
 });
 
-app.get('/delete', (req, res) => {
-    return res.render('index', {title:"제목"});
+app.get('/delete/:id', (req, res) => {
+    db.run(`DELETE FROM post WHERE id=${req.params.id};`);
+    return res.redirect('/');
 });
 
 app.get('/search', (req, res) => {
